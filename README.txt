@@ -1,0 +1,1 @@
+Didy Bot is a Chrome Extension Robot that aims to do what you tell it to do.
