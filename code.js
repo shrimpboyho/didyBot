@@ -1,1 +1,1 @@
-alert("narc");
+$("#input").val("HEy all");
