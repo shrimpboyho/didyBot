@@ -14,8 +14,8 @@ var PHRASE_COUNT = 2;
 
 $.get('http://www.random.org/sequences/?min=0&max=2&col=1&format=plain&rnd=new', function(data) {
 
-  		botLoop(data.split("\n"));	
-			console.log(data.split("\n"));
+  	botLoop(data.split("\n"));	
+	console.log(data.split("\n"));
 
 });
 
@@ -27,7 +27,8 @@ function botLoop(randomNums){
   setInterval(function(){
     
     $('#input').val(phrases[randomNums[i]]);
-    
+    sendMessage();
+      
     if(i != PHRASE_COUNT)
       i++;
     if(i == PHRASE_COUNT)
@@ -37,5 +38,13 @@ function botLoop(randomNums){
 }
 
 function minutes(time){
-  return time * 60000;
+	return time * 60000;
 }
+
+function sendMessage(){
+	$('#sayit-button').get(0).click();   
+}
+
+$('#sayit-button').click(function(){
+	alert('buttonsimilation works');   
+});
