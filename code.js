@@ -2,13 +2,13 @@ console.log("Bot Running...");
 
 /*  BOT PHRASES */
 
-var phrases[] = {
+var phrases = [
   
   "JQUERY RULES!",
   "PHP RULES!",
   "I LIKE CAKE!"
   
-};
+];
 
 var PHRASE_COUNT = 2;
 
