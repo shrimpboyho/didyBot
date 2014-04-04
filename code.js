@@ -10,6 +10,6 @@ console.log("Bot Running...");
 	// Grab the element
 	var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
 	console.log(word);
-	$('input.txtInput').val(word);
+	$('input.txtInput').val(word + ' ');
 //}
 			
