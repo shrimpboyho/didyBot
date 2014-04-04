@@ -18,8 +18,8 @@ if($('span[style*="color: rgb(153, 204, 0);').text() !== ','){
   var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
 }
 else{
-  var word = ',';
-  alert('Hit comma!');
+  console.log('Hit word with comma!')
+  var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + ',';
 }
   
 console.log(word);
