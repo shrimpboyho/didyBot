@@ -31,22 +31,7 @@ while(true){
 		$("input.txtInput").val(word);
 
 		//$('input.txtInput').simulateKeyPress(' ');
-		var space = false;
-		$(function() {
-		  $(document).keyup(function(evt) {
-		    if (evt.keyCode == 32) {
-		      space = false;
-		    }
-		  }).keydown(function(evt) {
-		    if (evt.keyCode == 32) {
-		      space = true;
-		    }
-		  });
-		});
-
-		if(space == true){
-			counter++;
-		}
+		counter++;
 
 	}
 }
