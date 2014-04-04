@@ -14,10 +14,13 @@ jQuery.fn.simulateKeyPress = function (character) {
 console.log("Bot Running...");
 
 // Grab the element
-if($('span[style*="color: rgb(153, 204, 0);').text() != ',')
+if($('span[style*="color: rgb(153, 204, 0);').text() !== ','){
   var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
-else
+}
+else{
   var word = ',';
+  alert('Hit comma!');
+}
   
 console.log(word);
 
