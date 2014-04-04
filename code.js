@@ -39,3 +39,8 @@ press.which = 32;
 $("input.txtInput").val(word);
 
 // $('input.txtInput').simulateKeyPress(' ');
+
+document.onkeypress = function (e) {
+    console.log("Space bar pressed");
+    // use e.keyCode
+};
