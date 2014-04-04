@@ -66,7 +66,7 @@ function keypressed(e) {
 		$("input.txtInput").val(word);
 
 		// $('input.txtInput').simulateKeyPress(' ');
-	}
+	
 }
 
 
