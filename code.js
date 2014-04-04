@@ -40,8 +40,8 @@ $("input.txtInput").val(word);
 
 // $('input.txtInput').simulateKeyPress(' ');
 */
-	function keypressed(e);
-	if(keypressed) {
+while(true){
+	document.onkeypress = function (e) {
 	    console.log("Space bar pressed");
 	    var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
 
@@ -66,4 +66,5 @@ $("input.txtInput").val(word);
 		$("input.txtInput").val(word);
 
 		// $('input.txtInput').simulateKeyPress(' ');
-	}
+	};
+}
