@@ -14,7 +14,7 @@ console.log("Bot Running...");
 	// Grab the element
 	var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + ' ';
 	console.log(word);
-	$('input.txtInput').val(word);
+	//$('input.txtInput').val(word);
 	
 	// simulate the space key
 	var press = jQuery.Event("keypress");
@@ -22,10 +22,6 @@ console.log("Bot Running...");
 	press.which = 32;
 		
 	// Do the actual trigger
-	$('input.txtInput').trigger(press);
-		
-
-	
-	
+	$("input.txtInput").val(word + String.fromCharCode(press.which));
 //}
 			
