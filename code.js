@@ -17,9 +17,9 @@ console.log("Bot Running...");
 
 var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
 
-if($('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').next().text() === ','){
+if($('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').next().text() === ',' || ';'){
   console.log('Hit word with comma!')
-  word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + ',';
+  word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').next().text();
 }
   
 console.log(word);
