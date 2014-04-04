@@ -12,7 +12,7 @@ jQuery.fn.simulateKeyPress = function (character) {
 };
 
 console.log("Bot Running...");
-
+/*
 // Grab the element
 
 var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
@@ -25,7 +25,7 @@ if($('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').next
   console.log('Hit word with semicolon!')
   word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + ';';
 }
-  
+ 
 console.log(word);
 
 //$('input.txtInput').val(word);
@@ -39,8 +39,31 @@ press.which = 32;
 $("input.txtInput").val(word);
 
 // $('input.txtInput').simulateKeyPress(' ');
+*/
+	function keypressed(e)
+	if(keypressed) {
+	    console.log("Space bar pressed");
+	    var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
 
-document.onkeypress = function (e) {
-    console.log("Space bar pressed");
-    // use e.keyCode
-};
+		if($('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').next().text() === ','){
+		  console.log('Hit word with comma!')
+		  word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + ',';
+		}
+		if($('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').next().text() === ';'){
+		  console.log('Hit word with semicolon!')
+		  word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + ';';
+		}
+	    console.log(word);
+
+		//$('input.txtInput').val(word);
+
+		// simulate the space key
+		var press = jQuery.Event("keypress");
+		press.ctrlKey = false;
+		press.which = 32;
+
+		// Do the actual trigger
+		$("input.txtInput").val(word);
+
+		// $('input.txtInput').simulateKeyPress(' ');
+	};
