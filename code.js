@@ -21,7 +21,7 @@ console.log("Bot Running...");
 	// Do the actual trigger
 	$('input.txtInput').trigger(press);
 		
-*/
+
 	
 	
 //}
