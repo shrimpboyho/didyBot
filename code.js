@@ -14,12 +14,12 @@ jQuery.fn.simulateKeyPress = function (character) {
 console.log("Bot Running...");
 
 // Grab the element
-if($('span[style*="color: rgb(153, 204, 0);').text() !== ','){
-  var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
-}
-else{
+
+var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
+
+if($('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').next().text() === ','){
   console.log('Hit word with comma!')
-  var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + ',';
+  word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + ',';
 }
   
 console.log(word);
