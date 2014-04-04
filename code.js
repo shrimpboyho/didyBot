@@ -12,19 +12,15 @@ console.log("Bot Running...");
 	var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + ' ';
 	console.log(word);
 	$('input.txtInput').val(word);
-	var i;
-	/*for(i = 0; i < word.length; i++){
-		// simulate the typing of each key
-		var press = jQuery.Event("keypress");
-		press.ctrlKey = false;
-		press.which = word.charCodeAt(i);
+	
+	// simulate the space key
+	var press = jQuery.Event("keypress");
+	press.ctrlKey = false;
+	press.which = 32;
 		
-		// Do the actual trigger
-		$('input.txtInput').trigger(press);
+	// Do the actual trigger
+	$('input.txtInput').trigger(press);
 		
-		// Make it look like it was typed in
-		$('input.txtInput').append(word[i]);
-	}
 */
 	
 	
