@@ -9,7 +9,7 @@ console.log("Bot Running...");
 
 //while(){
 	// Grab the element
-	var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
+	var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + ' ';
 	console.log(word);
 	var i;
 	for(i = 0; i < word.length; i++){
@@ -17,7 +17,12 @@ console.log("Bot Running...");
 		var press = jQuery.Event("keypress");
 		press.ctrlKey = false;
 		press.which = word.charCodeAt(i);
+		
+		// Do the actual trigger
 		$('input.txtInput').trigger(press);
+		
+		// Make it look like it was typed in
+		$('input.txtInput').append(word[i]);
 	}
 
 	
