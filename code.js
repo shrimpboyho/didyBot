@@ -41,7 +41,7 @@ $("input.txtInput").val(word);
 // $('input.txtInput').simulateKeyPress(' ');
 */
 function keypressed(e) {
-	if(e.keyCode == 32){
+	
 		console.log("Space bar pressed");
 	    var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
 
