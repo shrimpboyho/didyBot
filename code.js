@@ -6,7 +6,6 @@
 
 console.log("Bot Running...");
 
-var paragraph = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text()
 
 //while(){
 	// Grab the element
