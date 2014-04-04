@@ -40,9 +40,9 @@ $("input.txtInput").val(word);
 
 // $('input.txtInput').simulateKeyPress(' ');
 */
-while(true){
-	document.onkeypress = function (e) {
-	    console.log("Space bar pressed");
+function keypressed(e) {
+	if(e.keyCode == 32){
+		console.log("Space bar pressed");
 	    var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
 
 		if($('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').next().text() === ','){
@@ -66,5 +66,7 @@ while(true){
 		$("input.txtInput").val(word);
 
 		// $('input.txtInput').simulateKeyPress(' ');
-	};
+	}
 }
+
+
