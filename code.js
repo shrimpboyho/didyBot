@@ -11,8 +11,9 @@ console.log("Bot Running...");
 	// Grab the element
 	var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + ' ';
 	console.log(word);
+	$('input.txtInput').val(word);
 	var i;
-	for(i = 0; i < word.length; i++){
+	/*for(i = 0; i < word.length; i++){
 		// simulate the typing of each key
 		var press = jQuery.Event("keypress");
 		press.ctrlKey = false;
@@ -24,7 +25,7 @@ console.log("Bot Running...");
 		// Make it look like it was typed in
 		$('input.txtInput').append(word[i]);
 	}
-
+*/
 	
 	
 //}
