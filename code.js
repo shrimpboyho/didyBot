@@ -25,7 +25,9 @@ console.log("Bot Running...");
 	press.which = 32;
 		
 	// Do the actual trigger
-	$("input.txtInput").val(word + String.fromCharCode(press.which));
+	$("input.txtInput").val(word);
+
+	$("input.txtInput").val(String.fromCharCode(press.which));
 
 	//$('input.txtInput').simulateKeyPress(' ');
 //}
