@@ -13,22 +13,41 @@ jQuery.fn.simulateKeyPress = function (character) {
 
 console.log("Bot Running...");
 
-//while(){
+var counter = 0;
+
+while(true){
+	while(counter == 0){
 	// Grab the element
-	var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
-	console.log(word);
-	//$('input.txtInput').val(word);
-	
-	// simulate the space key
-	var press = jQuery.Event("keypress");
-	press.ctrlKey = false;
-	press.which = 32;
+		var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
+		console.log(word);
+		//$('input.txtInput').val(word);
 		
-	// Do the actual trigger
-	$("input.txtInput").val(word);
+		// simulate the space key
+		var press = jQuery.Event("keypress");
+		press.ctrlKey = false;
+		press.which = 32;
+			
+		// Do the actual trigger
+		$("input.txtInput").val(word);
 
-	$("input.txtInput").val(String.fromCharCode(press.which));
+		//$('input.txtInput').simulateKeyPress(' ');
+		var space = false;
+		$(function() {
+		  $(document).keyup(function(evt) {
+		    if (evt.keyCode == 32) {
+		      space = false;
+		    }
+		  }).keydown(function(evt) {
+		    if (evt.keyCode == 32) {
+		      space = true;
+		    }
+		  });
+		}
 
-	//$('input.txtInput').simulateKeyPress(' ');
-//}
+		if(space == true){
+			counter++;
+		}
+
+	}
+}
 			
