@@ -42,7 +42,7 @@ while(true){
 		      space = true;
 		    }
 		  });
-		}
+		});
 
 		if(space == true){
 			counter++;
