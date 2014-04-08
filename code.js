@@ -16,7 +16,7 @@ $(document).ready(function() {
 });
 
 function pressKey() {
-  var e = jQuery.Event("keypress");
+  var e = jQuery.Event("keydown");
   e.which = 32; // # space
   $(document).trigger(e);
 }
@@ -39,10 +39,6 @@ console.log(word);
 
 //$('input.txtInput').val(word);
 
-// simulate the space key
-var press = jQuery.Event("keypress");
-press.ctrlKey = false;
-press.which = 32;
 
 // Do the actual trigger
 $("input.txtInput").val(word);
