@@ -18,7 +18,7 @@ $(document).ready(function() {
 function pressKey() {
   var e = jQuery.Event("keypress");
   e.which = 32; // # space
-  $("input.txtInput").trigger(e);
+  $(document).trigger(e);
 }
 console.log("Bot Running...");
 
