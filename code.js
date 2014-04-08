@@ -10,16 +10,7 @@ jQuery.fn.simulateKeyPress = function (character) {
   // with arguments (Event, data, elem). That last arguments is very important!
   jQuery(this).trigger({ type: 'keypress', which: character.charCodeAt(0) });
 };
-var sendEvery = 750; //in milliseconds
-$(document).ready(function() {
-     setInterval(pressKey, sendEvery);  
-});
 
-function pressKey() {
-  var e = jQuery.Event("keydown");
-  e.which = 32; // # space
-  $("input.txtInput").trigger(e);
-}
 console.log("Bot Running...");
 
 // Grab the element
@@ -42,6 +33,15 @@ console.log(word);
 
 // Do the actual trigger
 $("input.txtInput").val(word);
+
+// var sendEvery = 750; //in milliseconds
+// $(document).ready(function() {
+//      setInterval(pressKey, sendEvery);  
+// });
+//This function below is pressKey()
+var e = jQuery.Event("keydown");
+e.which = 32; // # space
+$("input.txtInput").trigger(e);
 
 // $('input.txtInput').simulateKeyPress(' ');
 
