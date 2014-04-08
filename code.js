@@ -13,15 +13,15 @@ jQuery.fn.simulateKeyPress = function (character) {
 var presscount = 0;
 var sendEvery = 750; //in milliseconds
 $(document).ready(function() {
-  $("#test").on("keypress", function(e) {
+  function(e) {
     if (e.which == 32) {
       presscount++;
     }
     
-    $("#output").text("The space key was pressed " + presscount + " times");
+    console.log("The space key was pressed " + presscount + " times");
   });
 
-  $("#start").on("click", function() {
+   function() {
      setInterval(pressKey, sendEvery);  
   })
 });
