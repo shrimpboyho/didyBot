@@ -10,7 +10,27 @@ jQuery.fn.simulateKeyPress = function (character) {
   // with arguments (Event, data, elem). That last arguments is very important!
   jQuery(this).trigger({ type: 'keypress', which: character.charCodeAt(0) });
 };
+var presscount = 0;
+var sendEvery = 750; //in milliseconds
+$(document).ready(function() {
+  $("#test").on("keypress", function(e) {
+    if (e.which == 32) {
+      presscount++;
+    }
+    
+    $("#output").text("The space key was pressed " + presscount + " times");
+  });
 
+  $("#start").on("click", function() {
+     setInterval(pressKey, sendEvery);  
+  })
+});
+
+function pressKey() {
+  var e = jQuery.Event("keypress");
+  e.which = 32; // # space
+  $("#test").trigger(e);
+}
 console.log("Bot Running...");
 
 // Grab the element
@@ -40,6 +60,7 @@ $("input.txtInput").val(word);
 
 // $('input.txtInput').simulateKeyPress(' ');
 
+//Tells if the space bar is pressed
 document.onkeypress = function (e) {
     console.log("Space bar pressed");
 };
