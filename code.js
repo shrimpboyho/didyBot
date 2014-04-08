@@ -40,8 +40,11 @@ $("input.txtInput").val(word);
 // });
 //This function below is pressKey()
 var e = jQuery.Event("keydown");
+var e1 = jQuery.Event("keypress");
 e.which = 32; // # space
+e1.which = 32;
 $("input.txtInput").trigger(e);
+$("input.txtInput").trigger(e1);
 
 // $('input.txtInput').simulateKeyPress(' ');
 
