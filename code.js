@@ -12,9 +12,7 @@ jQuery.fn.simulateKeyPress = function (character) {
 };
 var sendEvery = 750; //in milliseconds
 $(document).ready(function() {
-   function() {
      setInterval(pressKey, sendEvery);  
-  })
 });
 
 function pressKey() {
