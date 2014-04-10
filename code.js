@@ -13,38 +13,41 @@ jQuery.fn.simulateKeyPress = function (character) {
 
 console.log("Bot Running...");
 
+var setInterval(function {getWord()}, 100);
+
 // Grab the element
-
-var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
-
-if($('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').next().text() === ','){
-  console.log('Hit word with comma!')
-  word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + ',';
-}
-if($('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').next().text() === ';'){
-  console.log('Hit word with semicolon!')
-  word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + ';';
-}
+function getWord(){
+  var word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text();
   
-console.log(word);
-
-//$('input.txtInput').val(word);
-
-
-// Do the actual trigger
-$("input.txtInput").val(word);
+  if($('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').next().text() === ','){
+    console.log('Hit word with comma!')
+    word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + ',';
+  }
+  if($('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').next().text() === ';'){
+    console.log('Hit word with semicolon!')
+    word = $('span[style*="text-decoration: underline; color: rgb(153, 204, 0);"]').text() + ';';
+  }
+    
+  console.log(word);
+  
+  //$('input.txtInput').val(word);
+  
+  
+  // Do the actual trigger
+  $("input.txtInput").val(word);
+}
 
 // var sendEvery = 750; //in milliseconds
 // $(document).ready(function() {
 //      setInterval(pressKey, sendEvery);  
 // });
 //This function below is pressKey()
-var e = jQuery.Event("keydown");
-var e1 = jQuery.Event("keypress");
-e.which = 32; // # space
-e1.which = 32;
-$("input.txtInput").trigger(e);
-$("input.txtInput").trigger(e1);
+// var e = jQuery.Event("keydown");
+// var e1 = jQuery.Event("keypress");
+// e.which = 32; // # space
+// e1.which = 32;
+// $("input.txtInput").trigger(e);
+// $("input.txtInput").trigger(e1);
 
 // $('input.txtInput').simulateKeyPress(' ');
 
