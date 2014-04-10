@@ -13,7 +13,7 @@ jQuery.fn.simulateKeyPress = function (character) {
 
 console.log("Bot Running...");
 
-var setInterval(function {getWord()}, 100);
+var myVar = setInterval(function {getWord()}, 100);
 
 // Grab the element
 function getWord(){
