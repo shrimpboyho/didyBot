@@ -37,6 +37,7 @@ function getWord(){
   $("input.txtInput").val(word);
 }
 
+
 // var sendEvery = 750; //in milliseconds
 // $(document).ready(function() {
 //      setInterval(pressKey, sendEvery);  
